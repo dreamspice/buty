@@ -37,6 +37,10 @@
       transition: opacity 1s;
       opacity: 1;
     }
+
+    #cart-section {
+        visibility: hidden;
+    }
     
   </style>
 </head>
@@ -52,7 +56,7 @@
     </div>
 </header>
   <nav>
-    <div id='mobile-menu' class="phone-menu absolute bg-white top-0 left-0 w-3/5 h-screen z-50 text-xl font-semibold pt-20 pl-6" style="display: none;">
+    <div id='mobile-menu' class="phone-menu absolute bg-white top-0 left-0 w-3/5 h-screen z-30 text-xl font-semibold pt-20 pl-6" style="display: none;">
       <img id='close-button' class="cursor-pointer absolute top-8 left-6" src="/images/icon-close.svg">
       <h2 class="mb-2 text-very-dark-blue">Collections</h2>
       <h2 class="mb-2 text-very-dark-blue">Men</h2>
@@ -61,7 +65,7 @@
       <h2 class="mb-2 text-very-dark-blue">Contact</h2>
     </div>
   </nav>
-  <div id="cart-section" class="absolute bg-white top-24 left-[50%] -translate-x-2/4 z-40 w-11/12 h-[300px] rounded-md transition-0">
+  <div id="cart-section" class="absolute bg-white top-24 left-[50%] -translate-x-2/4 z-40 w-11/12 h-[250px] rounded-md transition-0">
     <p class="border-b-2 py-4 pl-4 font-semibold text-very-dark-blue">Cart<p>
     <p class="text-center pt-24 pb-36 font-semibold text-dark-grayish-blue">Your cart is empty</p>
   </div>
@@ -73,10 +77,10 @@
         <img class="swiper-slide w-full h-auto" src="/images/image-product-3.jpg">
         <img class="swiper-slide w-full h-auto" src="/images/image-product-4.jpg">
       </div>
-      <div onclick='plusSlides(-1)' class="hover:bg-gray-300 bg-white absolute top-2/4 left-5 rounded-full w-10 h-10 cursor-pointer">
+      <div onclick='plusSlides(-1)' class="hover:bg-gray-300 bg-white absolute top-2/4 left-5 rounded-full w-10 h-10 cursor-pointer prev-btn">
         <img class='absolute top-3 left-3' src="/images/icon-previous.svg">
       </div>
-      <div onclick='plusSlides(1)' class="hover:bg-gray-300 bg-white absolute top-2/4 right-5 rounded-full w-10 h-10 cursor-pointer">
+      <div onclick='plusSlides(1)' class="hover:bg-gray-300 bg-white absolute top-2/4 right-5 rounded-full w-10 h-10 cursor-pointer next-btn">
         <img class='absolute top-3 right-3' src="/images/icon-next.svg">
       </div>
     </div>

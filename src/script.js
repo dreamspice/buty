@@ -23,6 +23,7 @@ function openMenu() {
         logo.classList.add('transition-0');
         gsap.fromTo('#mobile-menu', {duration: 1, y: 1200, opacity: 0}, {duration: 1, y: 0, opacity: 1});
         mobileMenu.style.display = 'block';
+        mobileMenu.style.visibility = 'visible';
         headerSection.classList.add('gray-scale');
         mainSection.classList.add('gray-scale');
 }
@@ -32,7 +33,7 @@ function closeMenu() {
         logo.classList.remove('transition-0');
         hamburgerButton.classList.add('transition-1');
         logo.classList.add('transition-1');
-        gsap.fromTo('.phone-menu', {duration: 1, y: 0, opacity: 1}, {duration: 2, y: 1800, opacity: 0});
+        gsap.fromTo('.phone-menu', {duration: 1, y: 0, opacity: 1}, {duration: 2, y: 1200, opacity: 0});
         headerSection.classList.remove('gray-scale');
         mainSection.classList.remove('gray-scale');
 }
@@ -61,9 +62,11 @@ function openCart() {
         clicked = true;
         cartSection.classList.remove("transition-0");
         cartSection.classList.add("transition-1");
+        cartSection.style.visibility = 'visible';
     } else {
         cartSection.classList.remove("transition-1");
         cartSection.classList.add("transition-0");
+        cartSection.style.visibility = 'hidden';
         clicked = false;
     }
 }
