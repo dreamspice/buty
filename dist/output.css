@@ -734,6 +734,22 @@ video {
   height: 30px;
 }
 
+.h-\[320px\] {
+  height: 320px;
+}
+
+.h-\[350px\] {
+  height: 350px;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-\[330px\] {
+  height: 330px;
+}
+
 .w-5 {
   width: 1.25rem;
 }

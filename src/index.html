@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">  
+<script src="/src/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .transition-0 {
+      transition: opacity 1s;
+      opacity: 0;
+    }
+
+    .transition-1 {
+      transition: opacity 1s;
+      opacity: 1;
+    }
+
+    .gray-scale {
+     filter: grayscale(50%);
+     transition: filter 1.5s;
+    }
+
+    .trainsition-cart {
+      display: block;
+      transition: opacity 1s;
+      opacity: 1;
+    }
+
+    #cart-section {
+        visibility: hidden;
+    }
+    
+  </style>
+</head>
+<body class="pb-4 h-full">
+  <header id="header-section" class="flex justify-between items-center py-6">
+    <div class="flex justify-center items-center gap-4 ml-6">
+      <img id='hamburger-button' class="cursor-pointer w-5 h-5 mt-1" src="/images/icon-menu.svg">
+      <img id='logo' class="w-[130px] h-6" src="/images/logo.svg">
+    </div>
+    <div class="flex justify-center items-center gap-4 mr-6">
+      <img id="cart-button" class="cursor-pointer w-6 h-6" src="/images/icon-cart.svg">
+      <img class="w-6 h-6" src="/images/image-avatar.png">
+    </div>
+</header>
+  <nav>
+    <div id='mobile-menu' class="phone-menu absolute bg-white top-0 left-0 w-3/5 h-screen z-30 text-xl font-semibold pt-20 pl-6" style="display: none;">
+      <img id='close-button' class="cursor-pointer absolute top-8 left-6" src="/images/icon-close.svg">
+      <h2 class="mb-2 text-very-dark-blue">Collections</h2>
+      <h2 class="mb-2 text-very-dark-blue">Men</h2>
+      <h2 class="mb-2 text-very-dark-blue">Women</h2>
+      <h2 class="mb-2 text-very-dark-blue">About</h2>
+      <h2 class="mb-2 text-very-dark-blue">Contact</h2>
+    </div>
+  </nav>
+  <div id="cart-section" class="absolute bg-white top-24 left-[50%] -translate-x-2/4 z-40 w-11/12 h-[330px] rounded-md transition-0">
+    <p class="border-b-2 py-4 pl-4 font-semibold text-very-dark-blue">Cart<p>
+    <p class="text-center pt-24 pb-36 font-semibold text-dark-grayish-blue">Your cart is empty</p>
+  </div>
+  <main id="main-section">
+    <div id='photo-section' class="relative">
+      <div class="swiper-wrapper relative">
+        <img class="swiper-slide w-full h-auto" src="/images/image-product-1.jpg">
+        <img class="swiper-slide w-full h-auto" src="/images/image-product-2.jpg">
+        <img class="swiper-slide w-full h-auto" src="/images/image-product-3.jpg">
+        <img class="swiper-slide w-full h-auto" src="/images/image-product-4.jpg">
+      </div>
+      <div onclick='plusSlides(-1)' class="hover:bg-gray-300 bg-white absolute top-2/4 left-5 rounded-full w-10 h-10 cursor-pointer prev-btn">
+        <img class='absolute top-3 left-3' src="/images/icon-previous.svg">
+      </div>
+      <div onclick='plusSlides(1)' class="hover:bg-gray-300 bg-white absolute top-2/4 right-5 rounded-full w-10 h-10 cursor-pointer next-btn">
+        <img class='absolute top-3 right-3' src="/images/icon-next.svg">
+      </div>
+    </div>
+
+    <h1 class="text-orange font-semibold uppercase tracking-widest pl-8 text-start mb-2 mt-4">Sneaker Company</h1>
+
+    <h2 class="text-very-dark-blue font-bold text-3xl pl-8 text-start max-w-xs mb-2">Fall Limited Edition Sneakers</h2>
+
+    <p class="text-dark-grayish-blue pl-8 pr-6 mb-2 text-start max-w-md">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    <div class="flex flex-col items-center justify-center">
+    <div class="flex justify-between py-6 w-5/6">
+      <div class="flex justify-center items-center">
+        <span class="text-3xl text-very-dark-blue font-semibold">$125.00</span>
+        <span class="bg-pale-orange text-orange font-semibold py-1 px-2 rounded-lg">50%</span>
+      </div>
+      <div>
+        <span class="line-through text-dark-grayish-blue">$250.00</span>
+      </div>
+    </div>
+    <div class="flex items-center justify-between bg-light-grayish-blue w-5/6 py-3 rounded-lg mb-4">
+      <button id="minus" class="ml-4"><img src="/images/icon-minus.svg"></button>
+      <span id="actual-count" class="font-semibold text-very-dark-blue">0</span>
+      <button id="plus" class="mr-4"><img src="/images/icon-plus.svg"></button>
+    </div>
+    <button class="bg-orange hover:bg-orange-hover flex items-center justify-center py-4 rounded-lg gap-4 w-[83.3%]">
+      <img src="/images/icon-cart.svg">
+      <p class="text-white">Add to card</p>
+    </div>
+  </main>
+</body>
+</html>
