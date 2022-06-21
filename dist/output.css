@@ -750,6 +750,12 @@ video {
   height: 330px;
 }
 
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .w-5 {
   width: 1.25rem;
 }
